@@ -1,0 +1,520 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>某手CK获取方式及注意事项 | 肉松蛋黄派</title>
+<link rel="shortcut icon" href="https://treasunew.github.io/favicon.ico?v=1659069796532">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://treasunew.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="某手CK获取方式及注意事项 | 肉松蛋黄派 - Atom Feed" href="https://treasunew.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="🌶写在前面
+🐹https://e.coding.net/rouwu/rousong/Rooou.git 本仓库同步更新群主的脚本
+☀️本教程主要是收集群友在使用过程中遇到的一些问题，其次写了一点关于抓包的内容
+💫如果你对抓包之类的比较..." />
+    <meta name="keywords" content="教程" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://treasunew.github.io">
+  <img class="avatar" src="https://treasunew.github.io/images/avatar.png?v=1659069796532" alt="">
+  </a>
+  <h1 class="site-title">
+    肉松蛋黄派
+  </h1>
+  <p class="site-description">
+    我与我周旋 宁作我
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              某手CK获取方式及注意事项
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-07-12
+              </span>
+              <span>
+                11 min read
+              </span>
+              
+                <a href="https://treasunew.github.io/jiaocheng/" class="post-tag">
+                  # 教程
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://treasunew.github.io/post-images/jsbmanuscript.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h1 id="写在前面">🌶写在前面</h1>
+<p>🐹<a href="https://e.coding.net/rouwu/rousong/Rooou.git">https://e.coding.net/rouwu/rousong/Rooou.git</a> 本仓库同步更新群主的脚本<br>
+☀️本教程主要是收集群友在使用过程中遇到的一些问题，其次写了一点关于抓包的内容<br>
+💫如果你对抓包之类的比较熟悉，但是在使用脚本时会遇到一些报错，或者对脚本怎么玩有疑惑，请直接看注意事项<br>
+⚡️本教程会持续收集相关内容</p>
+<!-- more -->
+<blockquote>
+<p>参考目录<br>
+<ul class="markdownIt-TOC">
+<li><a href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2">🌶写在前面</a></li>
+<li><a href="#%E8%84%9A%E6%9C%AC%E7%9B%B8%E5%85%B3">🎁脚本相关</a>
+<ul>
+<li><a href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">🔮更新日志</a></li>
+<li><a href="#%EF%B8%8F%E5%8F%98%E9%87%8F%E8%A1%A8%E6%A0%BC">☁️变量表格</a></li>
+<li><a href="#%E6%8B%89%E5%BA%93">🔧拉库</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">🚫注意事项</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8A%93%E5%8C%85%E7%9B%B8%E5%85%B3">💡抓包相关</a>
+<ul>
+<li><a href="#%E4%B8%80-%E6%8A%93%E5%8C%85%E5%87%86%E5%A4%87%E7%AF%87">🎯一、抓包准备篇</a></li>
+<li><a href="#%E4%BA%8C-%E5%AE%89%E5%8D%93%E7%AF%87">📱二、安卓篇</a></li>
+<li><a href="#%E4%B8%89-%E8%8B%B9%E6%9E%9C%E7%AF%87">🍏三、苹果篇</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F%E5%8F%82%E8%80%83ck%E6%A0%BC%E5%BC%8F">⚖️参考CK格式</a></li>
+</ul>
+</p>
+</blockquote>
+<h1 id="脚本相关">🎁脚本相关</h1>
+<h2 id="更新日志">🔮更新日志</h2>
+<ul>
+<li>13号晚热更新了did规则比如说，A账号你did黑了，你现在更新了账号A的did，会重置账号A的任务，其他账号BCDE不受影响</li>
+<li>15日更新,增加了负载均衡</li>
+<li>15日更新修复了域名劫持问题</li>
+<li>18日一台服务器域名被劫持,更新脚本</li>
+<li>20日晚更新国内直连版</li>
+<li>21日更新<img src="https://treasunew.github.io/post-images/1658410656115.jpg" alt="" loading="lazy"></li>
+<li>23更新修复了众多BUG 添加了4组服务器</li>
+<li>24日更新<br>
+1、更新新手1元奖励,开关news_cash = yes ,老号都没有,新号有,看自己需要控制<br>
+2、开放1047和其他次数控制,默认task1047= 8 [1047金币的2个任务分别运行8次],task_other =10 [其他任务分别运行10次],自己看需调整<br>
+恢复任务,设置ksjsbtask为yes,或等第二天自动恢复,或更换did都可恢复全部任务,自己看需调整<br>
+3、新蹭分身功能,例:建立变量jsbCloned 值为 ks1@ks2[多个脚本名以@分割],复制脚本取名为ks1.py,ks2,py。则ks1.py对应变量为ksjsbtask_ks1  ksjsbtoken_ks1  news_cash_ks1 ksjsbapitoken_ks1等,则ks2.py对应变量为ksjsbtask_ks2  ksjsbtoken_ks2  news_cash_ks2 ksjsbapitoken_ks2 等,以此类推<br>
+(恢复任务,设置ksjsbtask为yes,或等第二天自动恢复,或更换did都可恢复全部任务)</li>
+<li>25日更新，服务器全部更换为国内服务器</li>
+<li>29日更新 目前高收益的宝箱被风控,21号版本不开宝箱.一直跑21的逃过一劫<br>
+此版本删除宝箱,正常的号可跑,新号可跑,暂时过渡一下,已被风控的号,暂停,等待解救办法.<br>
+为避免后续此尴尬情况,后续版本考虑开放任务控制.</li>
+</ul>
+<h2 id="️变量表格">☁️变量表格</h2>
+<center>脚本变量</center>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">变量</th>
+<th style="text-align:center">解释</th>
+<th style="text-align:center">脚本</th>
+<th style="text-align:center">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ksjsbcookie</td>
+<td style="text-align:center">CK变量名，多账号换行或者直接添加多个环境变量，同时关注注意事项第五条</td>
+<td style="text-align:center">ks_mission</td>
+<td style="text-align:center">参考ck格式</td>
+</tr>
+<tr>
+<td style="text-align:center">news_cash</td>
+<td style="text-align:center">新手1元奖励</td>
+<td style="text-align:center">ks_mission</td>
+<td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td style="text-align:center">task1047</td>
+<td style="text-align:center">运行一次脚本，跑1047抽奖的次数</td>
+<td style="text-align:center">ks_mission</td>
+<td style="text-align:center">默认8</td>
+</tr>
+<tr>
+<td style="text-align:center">task_other</td>
+<td style="text-align:center">运行一次脚本，跑其他任务的次数</td>
+<td style="text-align:center">ks_mission</td>
+<td style="text-align:center">默认10</td>
+</tr>
+<tr>
+<td style="text-align:center">ksjsbtoken</td>
+<td style="text-align:center">任务运行token，需要找群主买</td>
+<td style="text-align:center">ks_mission</td>
+<td style="text-align:center">自己填自己的</td>
+</tr>
+<tr>
+<td style="text-align:center">ksjsbtask</td>
+<td style="text-align:center">强制开启所有任务</td>
+<td style="text-align:center">ks_mission</td>
+<td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td style="text-align:center">changecookie</td>
+<td style="text-align:center">兑换账号的cookie</td>
+<td style="text-align:center">ks_coin</td>
+<td style="text-align:center">参考ck格式</td>
+</tr>
+<tr>
+<td style="text-align:center">kscoin</td>
+<td style="text-align:center">兑换的快币数</td>
+<td style="text-align:center">ks_coin</td>
+<td style="text-align:center">可选10/30/50/100/200</td>
+</tr>
+<tr>
+<td style="text-align:center">ksjsbapitoken</td>
+<td style="text-align:center">没有token，青龙爆炸，几点运行几点提，自己改定时即可</td>
+<td style="text-align:center">ks_tx</td>
+<td style="text-align:center">无</td>
+</tr>
+</tbody>
+</table>
+<h2 id="拉库">🔧拉库</h2>
+<ul>
+<li><strong>库里脚本有做任务、提现、快币兑换  ks_mission1这是提供给多任务用的，没有需要的自己禁用</strong></li>
+<li>2.13.0以上（含有订阅管理的）</li>
+<li>库地址：<a href="https://e.coding.net/rouwu/rousong/Rooou.git">https://e.coding.net/rouwu/rousong/Rooou.git</a></li>
+<li>白名单：ks_</li>
+<li>依赖：ql.js|sendNotify.js|JS_USER_AGENTS.js|USER_AGENTS.js<br>
+<img src="https://treasunew.github.io/post-images/1658117781593.png" alt="" loading="lazy"></li>
+<li>2.13.0以下（不含订阅管理的）</li>
+<li>打开定时任务→添加任务→按照下图填写即可</li>
+</ul>
+<blockquote>
+<p>拉库指令 ql repo https://e.coding.net/rouwu/rousong/Rooou.git &quot;ks_&quot; &quot;&quot; &quot;ql.js|sendNotify.js|JS_USER_AGENTS.js|USER_AGENTS.js&quot;<br>
+<img src="https://treasunew.github.io/post-images/1658117827728.png" alt="" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1658117834341.png" alt="" loading="lazy"></p>
+</blockquote>
+<h2 id="注意事项">🚫注意事项</h2>
+<p>📍因为群里好像每天都有人有问题，群主解答也比较麻烦，所以统一归类汇总所有已解决问题</p>
+<ol>
+<li>报错 如果里面有443  关闭防火墙，同时参考注意事项第十八条</li>
+<li>建议定时<br>
+<img src="https://treasunew.github.io/post-images/1657613882975.jpg" alt="" loading="lazy"></li>
+<li><img src="https://treasunew.github.io/post-images/1657613918127.jpg" alt="" loading="lazy"></li>
+<li>token含义<br>
+<img src="https://treasunew.github.io/post-images/1657613948258.jpg" alt="" loading="lazy"></li>
+<li>重要提醒：第一个CK需要自己更改头部<br>
+<img src="https://treasunew.github.io/post-images/1657614014705.jpg" alt="" loading="lazy"></li>
+<li>脚本怎么放到青龙，打开脚本→复制→打开青龙→脚本管理→右边三个点（...）→添加→<strong>输入ksjsb.py</strong>→然后将复制的内容粘贴到里面，保存→定时任务→添加任务→名称随便填→命令：task ksjsb.py→定时请看第二条</li>
+<li>以下操作导致黑号或者CK失效：
+<ul>
+<li>退出登录</li>
+<li>修改头像，昵称等</li>
+<li>邀请新人</li>
+</ul>
+</li>
+<li>快手屏蔽了 腾讯云  阿里云的IP  ,百度云虽然未屏蔽 但是极易被风控 所以要本地跑</li>
+<li>每个月 提现100以上 要实名(实名最多2个号) 实名多了就黑  超过100 换快币</li>
+<li>259金币为1 更换did或注销,1047金币为0,更换did或者停一天</li>
+<li>变量ksjsbtask='yes'  就是强制开启所有任务,换did测试时候可以弄下,其他时间不要开启,自动优化任务(做完次数今日将不做)、优化网络连接,优化输出,增加token次数之类</li>
+<li>出现如图情况，就是CK格式不对或者群主服务器网络波动，请检查CK（现在不能直接拼了，需要将对应参数替换进链接里面），或者等会儿再跑<br>
+<img src="https://treasunew.github.io/post-images/1657634783635.png" alt="" loading="lazy"></li>
+<li>若出现跑着跑着1047金币收益变为0得情况，一共有两种可能<br>
+<img src="https://treasunew.github.io/post-images/1657669297936.png" alt="" loading="lazy">
+<ul>
+<li>账号收益已经跑满</li>
+<li>若一开始跑就出现这种情况，请查阅变量表格，将强制任务开着跑，若还是没收益，那只能停一天再跑了，若停一天跑还是不行，那就是黑号了</li>
+</ul>
+</li>
+<li>若出现token出现错误<br>
+<img src="https://treasunew.github.io/post-images/1657669547265.png" alt="" loading="lazy">
+<ul>
+<li>请检查自己的变量名是否与变量表格内一致</li>
+<li>若一致，请检查token填写是否错误</li>
+<li>最好将变量放在配置文件中，用export ksjsbtoken = &quot;你的token&quot;</li>
+</ul>
+</li>
+<li>出现如图的情况，请到青龙的依赖管理→添加依赖→python3→输入requests→确定，即可跑脚本<br>
+<img src="https://treasunew.github.io/post-images/1657670258133.png" alt="" loading="lazy"></li>
+<li>若出现 no such file or directory 请参考<strong>注意事项</strong>第六条，然后新建任务即可<br>
+<img src="https://treasunew.github.io/post-images/1657670398694.png" alt="" loading="lazy"></li>
+<li>经过测试，did和rdid可以填写为一个，脚本正常使用</li>
+<li>出现如图情况就是IP被快手ban了
+<ul>
+<li>更换IP段</li>
+<li>疯狂高并发（开玩笑）</li>
+<li>重新跑（貌似没用）<br>
+<img src="https://treasunew.github.io/post-images/1657843203351.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>账号黑了，自己注意提现的ip和对应的手机归属地要一样<br>
+<img src="https://treasunew.github.io/post-images/1658103317806.png" alt="" loading="lazy"></li>
+<li>返回 都是64,为账号异常 得实名</li>
+</ol>
+<h1 id="抓包相关">💡抓包相关</h1>
+<h2 id="一-抓包准备篇">🎯一、抓包准备篇</h2>
+<ol>
+<li>安卓手机：安卓11及其以上需要root，安卓10以下可以直接安装证书到根目录，安卓对版本没要求（默认最新版即可）
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1dN4y1M7DA">无Root获取CK</a></li>
+</ul>
+</li>
+<li>苹果手机：需要降级App才能抓到salt，且需要搭配安卓did才可以跑脚本
+<ul>
+<li>工具：KNOT STREAM 在AppStore搜索安装即可</li>
+<li>版本：9.1.11.626<br>
+<img src="https://treasunew.github.io/post-images/1657608751016.png" alt="版本" loading="lazy"></li>
+<li>抓登录的包<br>
+<img src="https://treasunew.github.io/post-images/1657609822869.jpg#pic_center" alt="IOS包名" width="300" height="550" loading="lazy"></li>
+<li>降级教程 <a href="https://www.52pojie.cn/thread-1284776-1-1.html?tdsourcetag=s_pctim_aiomsg">https://www.52pojie.cn/thread-1284776-1-1.html?tdsourcetag=s_pctim_aiomsg</a></li>
+</ul>
+</li>
+<li>安卓需要额外准备小黄鸟 <a href="https://wfwl66.lanzoul.com/i3mi1ux92aj">https://wfwl66.lanzoul.com/i3mi1ux92aj</a> 这里提供给大家下载</li>
+<li>考虑到大家不止一个号，所以给大家提供一个分身工具 <a href="https://wfwl66.lanzoul.com/iBnOY07qef4h">小X分身</a></li>
+</ol>
+<p><font color=Red>注意：任何与root相关的问题请自己百度或者去<a href="https://www.coolapk.com/">米安</a>找答案</font><br>
+好了，准备工作差不多就这样，我们直接进入正题</p>
+<h2 id="二-安卓篇">📱二、安卓篇</h2>
+<p><font color=Red>注意：最好直接抓链接里面含有client_salt的整段链接，自己设备如果不行可购买did更换did<br>
+例如：抓包完成之后，搜索：/rest/nebula/bubble/config，就可以抓到含有salt的链接<br>
+</font></p>
+<ol>
+<li>首先打开快手极速版，登录你所需要抓包的账号（安卓不需要抓登录包）然后<strong>划掉快手极速版的后台</strong></li>
+<li>然后打开小黄鸟，安装证书还有把证书放到根目录这些东西我就不讲了，然后点击侧边的三个横杠，再依次按图进行点击<br>
+<img src="https://treasunew.github.io/post-images/1657611276467.jpg#pic_center" alt="1" width="300" height="650" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657611282943.jpg#pic_center" alt="2" width="300" height="650" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657611287487.jpg#pic_center" alt="3" width="300" height="650" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657611292863.jpg#pic_center" alt="4" width="300" height="650" loading="lazy"><br>
+这样完成以后，回到最开始的界面，点击箭头指向的按钮就开始抓包了<br>
+<img src="https://treasunew.github.io/post-images/1657611399963.jpg#pic_center" alt="5" width="300" height="650" loading="lazy"></li>
+<li>打开快手极速版开始抓包，不出意外就会出现一堆数据包，然后搜索client_salt<br>
+<img src="https://treasunew.github.io/post-images/1657612247956.jpg#pic_center" alt="6" width="300" height="650" loading="lazy"><br>
+得到这样的结果<br>
+<img src="https://treasunew.github.io/post-images/1657612274332.png#pic_center" alt="7" width="300" height="650" loading="lazy"><br>
+点击进去得到<br>
+<img src="https://treasunew.github.io/post-images/1657612311245.jpg#pic_center" alt="8" width="300" height="650" loading="lazy"><br>
+首先我们看这个链接里面含不含有client_salt。如果<strong>存在</strong>的话直接长按复制链接，就不需要再操作后面的了，你的CK已经抓成功了，<strong>没有的话同样也需要复制链接备用</strong>，接着看<br>
+<img src="https://treasunew.github.io/post-images/1657612486081.jpg#pic_center" alt="9" width="300" height="650" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657612689967.jpg#pic_center" alt="11" width="300" height="650" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657612701908.jpg#pic_center" alt="12" width="300" height="650" loading="lazy"><br>
+接着我们点击请求→cookie→复制我们需要拼接的参数，用&amp;连接到我们之前得到的链接<br>
+<img src="https://treasunew.github.io/post-images/1657612965678.jpg#pic_center" alt="13" width="300" height="650" loading="lazy"><br>
+<strong>注：</strong></li>
+</ol>
+<ul>
+<li>每两个新添加的参数之间都需要用&amp;连接</li>
+<li>第一个新加参数的前面也需要添加&amp;连接<br>
+到这里我们完成了安卓抓包以及拼接的过程</li>
+</ul>
+<p>若文字太过冗杂，可以看无需root获取CK视频 ↓↓↓<br>
+<a href="https://www.bilibili.com/video/BV1dN4y1M7DA">bilibili</a></p>
+<h2 id="三-苹果篇">🍏三、苹果篇</h2>
+<p>因为苹果抓包软件的安装和使用比较简单，我就不讲安装和使用了<br>
+大致流程就是安装→安装证书→信任证书→允许添加VPN<br>
+步入正题：</p>
+<ol>
+<li>抓登录的包<br>
+<img src="https://treasunew.github.io/post-images/1657613412291.jpg#pic_center" alt="" width="300" height="550" loading="lazy"></li>
+<li>具体版本自己看介绍，如果不在低版本好像抓不到包，降级请看准备工具和环境<br>
+<img src="https://treasunew.github.io/post-images/1657613457263.png" alt="" loading="lazy"></li>
+<li>苹果抓到的salt名字和安卓不一样，请更正为安卓格式<strong>client_salt</strong>，同时请更换did为安卓did（如自己无法获取，请找网站自行购买）</li>
+</ol>
+<h1 id="️参考ck格式">⚖️参考CK格式</h1>
+<table>
+<thead>
+<tr>
+<th>示例CK</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>https://apijs1.gifshow.com/rest/nebula/system/abtest/config?gid=DFPDB61E977852F83C6B74B7EAEB68E4B1188CE606C8D27D605EA06866E3D358&amp;mod=Xiaomi%28M2011K2C%29&amp;appver=10.4.20.3479&amp;language=zh-cn&amp;sys=ANDROID_11&amp;mcc=46011&amp;did_tag=2&amp;countryCode=cn&amp;net=WIFI&amp;socName=Qualcomm%20Snapdragon%208350&amp;kpf=ANDROID_PHONE&amp;ver=10.4&amp;c=XIAOMI&amp;oDid=TEST_ANDROID_72ad5c54605b5c0a&amp;android_os=0&amp;os=android&amp;boardPlatform=lahaina&amp;ftt=&amp;kpn=NEBULA&amp;androidApiLevel=30&amp;abi=arm64&amp;device_abi=&amp;userId=2821495976&amp;memoryTotalSize=11276&amp;rdid=ANDROID_xxxxxxxxxxx&amp;did=ANDROID_xxxxxxxxx&amp;ud=xxxxxxxx&amp;oc=XIAOMI&amp;egid=DFPDB61E977852F83C6B74B7EAEB68E4B1188CE606C8D27D605EA06866E3D358&amp;app=0&amp;country_code=cn&amp;hotfix_ver=&amp;kcv=1462&amp;sw=1440&amp;sh=3200&amp;newOc=XIAOMI&amp;sbh=137&amp;nbh=56&amp;ddpi=560&amp;totalMemory=11276&amp;keyconfig_state=1&amp;cold_launch_time_ms=1653659643781&amp;thermal=10000&amp;slh=0&amp;deviceBit=0&amp;userRecoBit=0&amp;did_gt=1653659579674&amp;iuid=&amp;max_memory=256&amp;isp&amp;browseType=3&amp;grant_browse_type=INITIALIZATION&amp;apptype=22&amp;darkMode=false&amp;bottom_navigation=true&amp;is_background=1&amp;sid=kuaishou.abtest&amp;client_key=2ac2a76d&amp;token=Cg9rdWFpc2hvdS5hcGkuc3QSoAGqk5_RQ9hwFTGiBf40uW4J4c118hmLvK6lqPi13X0GRttv_EAT8-uiiXtAFzoexBVweFmZhGHOugb8AIXuHoWTwpHcIfZkAkzdXvINm-YYgR3keA8AdfqUL9KB8Ul-zMjQnN39o23qUXbv_uSgr1OcorsCKL1Wia9Orf6cCGJTC0cq0RnTYDsKCgIUgCfnZ6rGztYPjZptn2I4H79JKG-nGhKJIerh6pdEZprW36ARdua-0DsiIAOOBcEFN0nM1DxrFBYdOkx6KLSu323hshJXrxcx419NKAUwAQ&amp;kuaishou.api_st=xxxxxxx&amp;client_salt=xxxxxxxxxx&amp;cs=false&amp;uQaTag=0&amp;apiInvokeTiming=COLD_START&amp;__clientSign=1mHcgQGkjCKRGUugX-07Z8X9uUIOo-yKdhjeTne0mexIknydlSaa_Q&amp;__NS_sig3=5a54eecda64b4df4557919094659e03735693514802a2fd5ffef9b7b2f0f171d&amp;sig=feb2207fdd437679b497c1fa70bc1f2a&amp;__NStokensig=14edcf77c2d3bc1a07a2a5bd2138856d3bf8f8d3adf7154fc326e7c2bee34073</td>
+<td>示例CK，自己抓取重要参数，替换xxxxx即可</td>
+</tr>
+</tbody>
+</table>
+<p><strong>几个重要</strong>的参数，请自行更换为自己抓的参数</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">不可缺少的参数</th>
+<th style="text-align:center">参数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">did</td>
+<td style="text-align:center">ANDROID_c4a****2616096</td>
+</tr>
+<tr>
+<td style="text-align:center">rdid</td>
+<td style="text-align:center">ANDROID_97****9cd07963</td>
+</tr>
+<tr>
+<td style="text-align:center">client_salt</td>
+<td style="text-align:center">1fb693aadcbb51****8da1412b5</td>
+</tr>
+<tr>
+<td style="text-align:center">kuaishou.api_st</td>
+<td style="text-align:center">Cg9rdWFpc2hvdS5hcGkuc3QSoAGqk5_RQ9hwFTGiBf40uW4J4c118hmLvK6lqPi13X0GRttv_EAT8-uiiXtAFzoexBVweFmZhGHOugb8AIXuHoWTwpHcIfZkAkzdXvINm-YYgR3keA8AdfqUL9KB8Ul-zMjQnN39o23qUXbv_uSgr1OcorsCKL1Wia9Orf6cCGJTC0cq0RnTYDsKCgIUgCfnZ6rGztYPjZptn2I4H79JKG-nGhKJIerh6pdEZ****IAOOBcEFN0nM1DxrFBYdOkx6KLSu323hshJXrxcx419NKAUwAQ</td>
+</tr>
+</tbody>
+</table>
+<p>✍️最好抓链接里面含有client_salt的链接，其他的可能会出现0金币啥的，参照安卓篇的注意，那里抓的链接就是含有salt的</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2">🌶写在前面</a></li>
+<li><a href="#%E8%84%9A%E6%9C%AC%E7%9B%B8%E5%85%B3">🎁脚本相关</a>
+<ul>
+<li><a href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">🔮更新日志</a></li>
+<li><a href="#%EF%B8%8F%E5%8F%98%E9%87%8F%E8%A1%A8%E6%A0%BC">☁️变量表格</a></li>
+<li><a href="#%E6%8B%89%E5%BA%93">🔧拉库</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">🚫注意事项</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8A%93%E5%8C%85%E7%9B%B8%E5%85%B3">💡抓包相关</a>
+<ul>
+<li><a href="#%E4%B8%80-%E6%8A%93%E5%8C%85%E5%87%86%E5%A4%87%E7%AF%87">🎯一、抓包准备篇</a></li>
+<li><a href="#%E4%BA%8C-%E5%AE%89%E5%8D%93%E7%AF%87">📱二、安卓篇</a></li>
+<li><a href="#%E4%B8%89-%E8%8B%B9%E6%9E%9C%E7%AF%87">🍏三、苹果篇</a></li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F%E5%8F%82%E8%80%83ck%E6%A0%BC%E5%BC%8F">⚖️参考CK格式</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://treasunew.github.io/hello-gridea/">
+              <h3 class="post-title">
+                Hello Visitors
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'e546e15e5c51ff0787fc',
+    clientSecret: '3b5cfd4d06029c3fdf6d0d1da2adeb43df8745d1',
+    repo: 'RouSong',
+    owner: 'treasunew',
+    admin: ['treasunew'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  ©2021-2022 肉松.</br> All Rights Reserved.
+  <a class="rss" href="https://treasunew.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

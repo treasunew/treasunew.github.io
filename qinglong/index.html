@@ -1,0 +1,353 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>本地搭建青龙教程 | 肉松蛋黄派</title>
+<link rel="shortcut icon" href="https://treasunew.github.io/favicon.ico?v=1659069796532">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://treasunew.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="本地搭建青龙教程 | 肉松蛋黄派 - Atom Feed" href="https://treasunew.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="☄写作初衷
+本文写作的初衷在于帮助一部分青龙小白，搭建属于自己的青龙，并且熟练使用青龙
+本文可搭配某手那篇文章使用，这篇作为前置课程，旨在为小白同学服务
+如遇任何问题，请私信留言，有空就会处理
+
+
+参考目录
+
+☄写作初衷
+☄简言
+📌搭建
+..." />
+    <meta name="keywords" content="青龙,面具,Docker,Root" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://treasunew.github.io">
+  <img class="avatar" src="https://treasunew.github.io/images/avatar.png?v=1659069796532" alt="">
+  </a>
+  <h1 class="site-title">
+    肉松蛋黄派
+  </h1>
+  <p class="site-description">
+    我与我周旋 宁作我
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              本地搭建青龙教程
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-07-16
+              </span>
+              <span>
+                5 min read
+              </span>
+              
+                <a href="https://treasunew.github.io/PdGCEy2fZ/" class="post-tag">
+                  # 青龙
+                </a>
+              
+                <a href="https://treasunew.github.io/TENNiPXWfq/" class="post-tag">
+                  # 面具
+                </a>
+              
+                <a href="https://treasunew.github.io/U4Ow-p_f4f/" class="post-tag">
+                  # Docker
+                </a>
+              
+                <a href="https://treasunew.github.io/TuZmBnty__/" class="post-tag">
+                  # Root
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://treasunew.github.io/post-images/qinglong.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h1 id="写作初衷">☄写作初衷</h1>
+<p>本文写作的初衷在于帮助一部分青龙小白，搭建属于自己的青龙，并且熟练使用青龙<br>
+本文可搭配某手那篇文章使用，这篇作为前置课程，旨在为小白同学服务<br>
+如遇任何问题，请私信留言，有空就会处理</p>
+<!-- more -->
+<blockquote>
+<p>参考目录<br>
+<ul class="markdownIt-TOC">
+<li><a href="#%E5%86%99%E4%BD%9C%E5%88%9D%E8%A1%B7">☄写作初衷</a></li>
+<li><a href="#%E7%AE%80%E8%A8%80">☄简言</a></li>
+<li><a href="#%E6%90%AD%E5%BB%BA">📌搭建</a>
+<ul>
+<li><a href="#%E6%90%AD%E5%BB%BA%E5%87%86%E5%A4%87%E7%AF%87">📰搭建准备篇</a></li>
+<li><a href="#%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA">📱安卓手机</a></li>
+<li><a href="#%E7%94%B5%E8%84%91dockerdesktop">💻电脑DockerDesktop</a></li>
+</ul>
+</li>
+</ul>
+</p>
+</blockquote>
+<h1 id="简言">☄简言</h1>
+<p>这篇文章属于是造轮子，网上教程很多，自己可以查阅，免ROOT装青龙（恢复包）这个是从科技玩家弄过来的，因为部分人没积分看不了，有积分的自己去看就行了<br>
+原文链接：<a href="https://www.kejiwanjia.com/jiaocheng/92420.html">https://www.kejiwanjia.com/jiaocheng/92420.html</a></p>
+<h1 id="搭建">📌搭建</h1>
+<h2 id="搭建准备篇">📰搭建准备篇</h2>
+<ol>
+<li>安卓手机
+<ul>
+<li>ROOT的情况下，但是的没有面具（Magisk），自己去<a href="https://www.coolapk.com/">米安</a>找教程安装Magisk</li>
+<li>青龙面具包 ↓↓↓</li>
+<li><a href="https://wfwl66.lanzoul.com/i9KsW07wa2fc">2.10.13</a></li>
+<li><a href="https://wfwl66.lanzoul.com/iekW807wa1xe">2.13.2</a></li>
+<li>无ROOT福音 <a href="https://od.ixcmstudio.cn/repository/main/ZeroTermux/">ZeroTermux</a></li>
+</ul>
+</li>
+<li>电脑虚拟机，能想到用电脑虚拟机的基本都是一些资深玩家了，不多说，其他人自己百度玩</li>
+<li>电脑DockerDesktop
+<ul>
+<li>自己下载安装包，我用的<a href="https://docs.docker.com/desktop/release-notes/#docker-desktop-420">4.2.0</a></li>
+<li>Docker搭建指令</li>
+</ul>
+</li>
+</ol>
+<h2 id="安卓手机">📱安卓手机</h2>
+<ol>
+<li>ROOT且有面具（Magisk）
+<ul>
+<li>1.1 打开你装好的面具（这里装好的面具不是只你装个APP就行了，还得有Magisk环境，自己去米安找安装Magisk的教程）</li>
+<li>1.2 之前下载包记得位置，一般在Downloads目录下</li>
+<li>1.3 然后按照下面步骤操作<br>
+<img src="https://treasunew.github.io/post-images/1657947524890.jpg#pic_center" alt="" width="300" height="550" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657947542866.jpg#pic_center" alt="" width="300" height="550" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657947549913.jpg#pic_center" alt="" width="300" height="550" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657947555253.jpg#pic_center" alt="" width="300" height="550" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657947561616.png#pic_center" alt="" width="300" height="550" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657947567862.jpg#pic_center" alt="" width="300" height="550" loading="lazy"></li>
+<li>1.4 然后重启手机访问 127.0.0.1:5700 即可，后面的问题请自己查阅另一篇文章</li>
+</ul>
+</li>
+<li>ROOT但无面具（Magisk）
+<ul>
+<li>2.1 面具不是只你装个APP就行了，还得有Magisk环境，自己去米安找安装Magisk的教程</li>
+<li>2.2 装好面具之后参考前面的即可</li>
+</ul>
+</li>
+<li>无ROOT
+<ul>
+<li>3.1 无ROOT有几种解决办法，第一种ROOT，第二种安装恢复包，第一种自己折腾，重点讲第二种
+<ul>
+<li>3.1.1 如果安装出现下图所示报错，请安装旧版本termux(ZeroTermux_0.117.13.apk)，如果依旧报错，说明你的手机安卓版本过低，请自行前往官方下载站尝试安装<a href="https://od.ixcmstudio.cn/repository/main/ZeroTermux/">旧版本</a><br>
+<img src="https://treasunew.github.io/post-images/1657948264617.png" alt="" loading="lazy"></li>
+<li>3.1.2 如果问题依旧如此，说明你的手机安卓版本过低，无法安装termux，请更换高版本安卓系统！(也就是没救了)</li>
+<li>3.1.3 正式开始</li>
+<li>uname -m 返回的不是aarch64，说明你的手机不是arm64的cpu，可以放弃安装<br>
+<img src="https://treasunew.github.io/post-images/1657948863193.png" alt="" loading="lazy"><br>
+链接：https://mdl.ink/S439cD<br>
+密码：termux<br>
+<img src="https://treasunew.github.io/post-images/1657948957817.gif" alt="" loading="lazy"></li>
+<li>3.1.4小结<br>
+导入青龙恢复包：<br>
+侧滑-&gt;备份/恢复-&gt;恢复-&gt;选择一个青龙恢复包-&gt;给容器添加名称-&gt;恢复-&gt;等待恢复完成即可<br>
+切换到青龙面板容器：<br>
+侧滑-&gt;容器切换-&gt;选择刚刚恢复的容器名称-&gt;切换-&gt;需要<br>
+<img src="https://treasunew.github.io/post-images/1657949121511.png" alt="" loading="lazy"><br>
+<img src="https://treasunew.github.io/post-images/1657949129395.gif" alt="" loading="lazy"><br>
+手机打开浏览器访问127.0.0.1:5700<br>
+熟悉的界面出现了，接下来该干啥就不用我多说了吧！<br>
+青龙面板的所有文件均在alpine系统的/ql路径下，执行cd /ql 即可进入到青龙目录中<br>
+<img src="https://treasunew.github.io/post-images/1657949236214.png" alt="" loading="lazy"><br>
+四、使用FTP文件传输工具上传本地脚本到青龙内部文件夹中，废除软链接方法【请使用v3版恢复包】<br>
+1、安装FTP文件传输工具【FileZilla_1.7.apk】，试了很多FTP工具，目前暂时只发现这个app能连上。并按照如下图方式设置好，最后点击保存<br>
+2、快捷下载地址 <a href="https://grbnb.lanzouf.com/i27MQ04m0fcj">https://grbnb.lanzouf.com/i27MQ04m0fcj</a><br>
+<img src="https://treasunew.github.io/post-images/1657949487818.png" alt="" loading="lazy"><br>
+3、点击连接即可连接进入到termux内部文件夹中<br>
+<img src="https://treasunew.github.io/post-images/1657949664280.png" alt="" loading="lazy"><br>
+4、进入到alpine系统后再点击进入到ql文件夹，此处是整个青龙面板的工作目录<br>
+<img src="https://treasunew.github.io/post-images/1657949684057.png" alt="" loading="lazy"><br>
+5、把本地脚本文件上传到scripts或者raw任意一个文件夹中，但是只有scripts文件夹中的脚本可在web浏览器面板的脚本管理中查看。你想上传脚本到哪个文件夹就先进入到这个文件夹中，然后再点击上传，再在本机内部存储中【默认是Download目录】找到你要上传的脚本所在的路径点击右上角的确定即可！<br>
+6、回到青龙面板，在定时任务中新建任务，参考下图填写本地脚本定时运行任务</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>青龙v2.10.13版本的脚本文件在当前工作目录下的scripts、raw文件夹中。v2.12.0版本以上均在data目录中</li>
+</ul>
+<h2 id="电脑dockerdesktop">💻电脑DockerDesktop</h2>
+<ol>
+<li>下载安装之后，打开软件<br>
+<img src="https://treasunew.github.io/post-images/1657950110537.png" alt="" loading="lazy"></li>
+<li>因为Docker自带的镜像源太慢，所以更换下镜像源（有科学上网环境不用换），参考<a href="https://blog.csdn.net/weixin_39305029/article/details/105014150">https://blog.csdn.net/weixin_39305029/article/details/105014150</a></li>
+<li>然后使用 <kbd>Win</kbd>+<kbd>R</kbd> 输入cmd打开终端<br>
+<img src="https://treasunew.github.io/post-images/1657950455473.png" alt="" loading="lazy"></li>
+<li>构建青龙容器
+<ul>
+<li>cd 你想把青龙本地目录放哪儿就写那个路径</li>
+<li>docker pull whyour/qinglong</li>
+<li>docker run -v $PWD/qinglong:/ql/data  -p 5700:5700 --name qinglong --hostname qinglong --restart unless-stopped whyour/qinglong:latest</li>
+<li>这样，本地青龙就搭建完成了，自己愉快的玩耍吧</li>
+</ul>
+</li>
+</ol>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E5%86%99%E4%BD%9C%E5%88%9D%E8%A1%B7">☄写作初衷</a></li>
+<li><a href="#%E7%AE%80%E8%A8%80">☄简言</a></li>
+<li><a href="#%E6%90%AD%E5%BB%BA">📌搭建</a>
+<ul>
+<li><a href="#%E6%90%AD%E5%BB%BA%E5%87%86%E5%A4%87%E7%AF%87">📰搭建准备篇</a></li>
+<li><a href="#%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA">📱安卓手机</a></li>
+<li><a href="#%E7%94%B5%E8%84%91dockerdesktop">💻电脑DockerDesktop</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://treasunew.github.io/jsbmanuscript/">
+              <h3 class="post-title">
+                某手CK获取方式及注意事项
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'e546e15e5c51ff0787fc',
+    clientSecret: '3b5cfd4d06029c3fdf6d0d1da2adeb43df8745d1',
+    repo: 'RouSong',
+    owner: 'treasunew',
+    admin: ['treasunew'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  ©2021-2022 肉松.</br> All Rights Reserved.
+  <a class="rss" href="https://treasunew.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
