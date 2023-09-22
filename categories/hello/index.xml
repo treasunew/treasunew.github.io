@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hello on 清酒半杯</title>
-    <link>https://hacots.com/categories/hello/</link>
+    <link>https://roustore.tk/categories/hello/</link>
     <description>Recent content in Hello on 清酒半杯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Sat, 27 Aug 2022 09:16:45 +0000</lastBuildDate><atom:link href="https://hacots.com/categories/hello/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Aug 2022 09:16:45 +0000</lastBuildDate><atom:link href="https://roustore.tk/categories/hello/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown Cheat Sheet</title>
-      <link>https://hacots.com/posts/markdown-cheat-sheet/</link>
+      <link>https://roustore.tk/posts/markdown-cheat-sheet/</link>
       <pubDate>Sat, 27 Aug 2022 09:16:45 +0000</pubDate>
       
-      <guid>https://hacots.com/posts/markdown-cheat-sheet/</guid>
+      <guid>https://roustore.tk/posts/markdown-cheat-sheet/</guid>
       <description>This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for basic syntax and extended syntax.</description>
     </item>
     

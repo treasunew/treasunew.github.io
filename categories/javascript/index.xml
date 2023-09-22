@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript on 清酒半杯</title>
-    <link>https://hacots.com/categories/javascript/</link>
+    <link>https://roustore.tk/categories/javascript/</link>
     <description>Recent content in JavaScript on 清酒半杯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>{year}</copyright><atom:link href="https://hacots.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>{year}</copyright><atom:link href="https://roustore.tk/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
